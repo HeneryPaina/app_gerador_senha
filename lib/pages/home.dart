@@ -71,8 +71,9 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          "GERADOR DE SENHAS",
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          "GERADOR DE SENHAS SEGURAS",
+          style:
+              TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold),
         ),
         elevation: 0,
         centerTitle: true,
@@ -128,10 +129,10 @@ class _HomeState extends State<Home> {
                 height: 40,
               ),
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * .50,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Colors.blueAccent),
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.redAccent),
                 child: FlatButton(
                   child: Text(
                     "Gerar Senha",
@@ -168,22 +169,26 @@ class _HomeState extends State<Home> {
                 child: Column(
                   children: [
                     Text(
-                      "Preferências",
+                      "Personalize a sua senha",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
-                          color: Colors.blueAccent),
+                          color: Colors.black54),
+                    ),
+                    SizedBox(
+                      height: 20,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Text("Tamanho"),
+                        Text("Tamanho da senha"),
                         Container(
                           width: MediaQuery.of(context).size.width / 6,
                           child: TextField(
                             controller: _controllerTamanho,
                             keyboardType: TextInputType.number,
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold),
                           ),
                         )
                       ],
@@ -195,13 +200,13 @@ class _HomeState extends State<Home> {
                         Checkbox(
                           value: letrasMaiusculas,
                           checkColor: Colors.white,
-                          activeColor: Colors.blueAccent,
+                          activeColor: Colors.redAccent,
                           onChanged: (bool value) {
                             setState(() {
                               letrasMaiusculas = value;
                             });
                           },
-                        )
+                        ),
                       ],
                     ),
                     Row(
@@ -211,7 +216,7 @@ class _HomeState extends State<Home> {
                         Checkbox(
                           value: letrasMinusculas,
                           checkColor: Colors.white,
-                          activeColor: Colors.blueAccent,
+                          activeColor: Colors.redAccent,
                           onChanged: (bool value) {
                             setState(() {
                               letrasMinusculas = value;
@@ -227,7 +232,7 @@ class _HomeState extends State<Home> {
                         Checkbox(
                           value: numeros,
                           checkColor: Colors.white,
-                          activeColor: Colors.blueAccent,
+                          activeColor: Colors.redAccent,
                           onChanged: (bool value) {
                             setState(() {
                               numeros = value;
@@ -243,7 +248,7 @@ class _HomeState extends State<Home> {
                         Checkbox(
                           value: simbolos,
                           checkColor: Colors.white,
-                          activeColor: Colors.blueAccent,
+                          activeColor: Colors.redAccent,
                           onChanged: (bool value) {
                             setState(() {
                               simbolos = value;
