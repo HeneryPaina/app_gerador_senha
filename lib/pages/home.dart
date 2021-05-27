@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
                 children: <Widget>[
                   Container(
                     height: 50,
-                    width: MediaQuery.of(context).size.width * .60,
+                    width: MediaQuery.of(context).size.width * .70,
                     decoration: BoxDecoration(
                         color: Colors.black12,
                         borderRadius: BorderRadius.circular(5)),
@@ -45,20 +45,20 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   FlatButton(
-                    color: Colors.blueAccent,
                     padding: EdgeInsets.all(5),
                     child: Column(
                       children: [
                         Icon(
                           Icons.content_copy,
-                          color: Colors.white,
+                          color: Colors.grey[4000],
                         ),
                         Text(
                           "Copiar",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                         )
                       ],
                     ),
+                    onPressed: () {},
                   ),
                 ],
               )
