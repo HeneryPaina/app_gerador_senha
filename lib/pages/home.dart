@@ -82,6 +82,32 @@ class _HomeState extends State<Home> {
                   onPressed: () {},
                 ),
               ),
+              SizedBox(
+                height: 10,
+              ),
+              Divider(),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  color: Color(0xfffff),
+                ),
+                child: Column(
+                  children: [
+                    Text(
+                      "Preferências",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.blueAccent),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
