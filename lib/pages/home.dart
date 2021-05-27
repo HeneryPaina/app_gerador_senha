@@ -61,7 +61,27 @@ class _HomeState extends State<Home> {
                     onPressed: () {},
                   ),
                 ],
-              )
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.blueAccent),
+                child: FlatButton(
+                  child: Text(
+                    "Gerar Senha",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  onPressed: () {},
+                ),
+              ),
             ],
           ),
         ),
