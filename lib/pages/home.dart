@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -180,6 +181,7 @@ class _HomeState extends State<Home> {
                         Container(
                           width: MediaQuery.of(context).size.width / 6,
                           child: TextField(
+                            controller: _controllerTamanho,
                             keyboardType: TextInputType.number,
                             style: TextStyle(fontSize: 18),
                           ),
