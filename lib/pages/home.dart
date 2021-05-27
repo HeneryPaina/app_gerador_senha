@@ -105,9 +105,81 @@ class _HomeState extends State<Home> {
                           fontSize: 20,
                           color: Colors.blueAccent),
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text("Tamanho"),
+                        Container(
+                          width: MediaQuery.of(context).size.width / 6,
+                          child: TextField(
+                            keyboardType: TextInputType.number,
+                            style: TextStyle(fontSize: 18),
+                          ),
+                        )
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text("Letras maiúsculas"),
+                        Checkbox(
+                          value: null,
+                          checkColor: Colors.white,
+                          activeColor: Colors.blueAccent,
+                          onChanged: (bool value) {
+                            setState(() {});
+                          },
+                        )
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text("Letras minúsculas"),
+                        Checkbox(
+                          value: null,
+                          checkColor: Colors.white,
+                          activeColor: Colors.blueAccent,
+                          onChanged: (bool value) {
+                            setState(() {});
+                          },
+                        )
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text("Números"),
+                        Checkbox(
+                          value: null,
+                          checkColor: Colors.white,
+                          activeColor: Colors.blueAccent,
+                          onChanged: (bool value) {
+                            setState(() {});
+                          },
+                        )
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text("Símbolos"),
+                        Checkbox(
+                          value: null,
+                          checkColor: Colors.white,
+                          activeColor: Colors.blueAccent,
+                          onChanged: (bool value) {
+                            setState(() {});
+                          },
+                        )
+                      ],
+                    ),
                   ],
                 ),
-              )
+              ),
+              SizedBox(
+                height: 10,
+              ),
             ],
           ),
         ),
