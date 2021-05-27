@@ -44,6 +44,22 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
+                  FlatButton(
+                    color: Colors.blueAccent,
+                    padding: EdgeInsets.all(5),
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.content_copy,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "Copiar",
+                          style: TextStyle(color: Colors.white),
+                        )
+                      ],
+                    ),
+                  ),
                 ],
               )
             ],
