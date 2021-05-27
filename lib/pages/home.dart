@@ -19,6 +19,37 @@ class _HomeState extends State<Home> {
         centerTitle: true,
         backgroundColor: Colors.white,
       ),
+      body: Container(
+        padding: EdgeInsets.fromLTRB(10, 40, 10, 10),
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    height: 50,
+                    width: MediaQuery.of(context).size.width * .60,
+                    decoration: BoxDecoration(
+                        color: Colors.black12,
+                        borderRadius: BorderRadius.circular(5)),
+                    child: Center(
+                      child: Text(
+                        "Senha",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
