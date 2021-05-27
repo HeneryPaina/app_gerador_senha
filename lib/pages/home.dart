@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -114,7 +116,10 @@ class _HomeState extends State<Home> {
                         )
                       ],
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Clipboard.setData(ClipboardData(text: senha));
+                      _showInfoFlushbarHelper(context);
+                    },
                   ),
                 ],
               ),
@@ -256,5 +261,12 @@ class _HomeState extends State<Home> {
         ),
       ),
     );
+  }
+
+  _showInfoFlushbarHelper(BuildContext context) {
+    FlushbarHelper.createInformation(
+      title: 'Senha copiada',
+      message: 'Agora é só colar onde você quiser!',
+    ).show(context);
   }
 }
